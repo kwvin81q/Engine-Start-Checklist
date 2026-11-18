@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1423">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<title>Engine Start Checklists</title>
+<style>
+:root{color-scheme:dark;font:100% system-ui,sans-serif;background:#0a1423;color:#f2f7ff}
+*{box-sizing:border-box}body{margin:0}
+main{max-width:1040px;margin:auto;padding:clamp(12px,3vw,32px)}
+header{display:flex;align-items:center;gap:16px;margin:12px 0 22px}
+header img{width:64px;height:64px;border-radius:15px}
+h1{font-size:clamp(1.4rem,5vw,2.2rem);line-height:1.1;margin:0}
+small,p{color:#bdcce0}header small{display:block;margin-bottom:5px}
+nav{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+a,button{font:inherit}
+button,.link{display:inline-flex;align-items:center;min-height:44px;padding:8px 13px;color:inherit;border:1px solid #526982;border-radius:10px;background:#182a41;text-decoration:none;cursor:pointer}
+button:hover,.link:hover{background:#2b435e}button:disabled{opacity:.45;cursor:default}
+button:focus-visible,a:focus-visible{outline:3px solid #ffc86c;outline-offset:2px}
+.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:10px}
+.choices button{justify-content:space-between;text-align:left;min-height:58px}
+.notice{padding:10px 12px;border-left:3px solid #eab760;background:#211e1c;color:#ffe0aa;font-size:.87rem}
+#progress{font-weight:650;color:#b9dfec}
+.paper-scroll{overflow:auto;border-radius:9px;background:#060d17}
+.paper{position:relative;width:100%;padding-left:32px}
+.paper img{display:block;width:100%;height:auto}
+.zoomed .paper{min-width:780px}
+.mark{position:absolute;left:3px;transform:translateY(-50%);display:grid;place-items:center;padding:0;width:26px;height:18px;min-height:0;border-radius:4px;font-size:.8rem;background:#22384d}
+.mark[aria-pressed="true"]{background:#207a58;color:white;border-color:#7be3b8}
+@media(pointer:coarse){.mark{width:29px}}
+</style>
+<main>
+<header><img src="icon.png" alt="" width="64" height="64"><div><small>MX · CHECKLIST REFERENCE</small><h1>Engine Start Checklists</h1></div></header>
+<p class="notice">Match the aircraft and engine, and verify the current approved checklist before use. Tap the boxes to record your place. Follow all applicable steps, notes and warnings on the original pages.</p>
+<nav id="path" aria-label="Checklist navigation"></nav>
+<section id="screen"></section>
+</main>
+<script src="catalog.js"></script>
+<script src="app.js"></script>
+</html>
